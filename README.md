@@ -44,7 +44,7 @@ This project is a web scraping tool that uses Selenium for automation, ProxyMesh
 
 ### Web Scraping Results
 Here’s a screenshot of the top 5 trending topics fetched from Twitter using Selenium and ProxyMesh:
-![Scraping Results](phtot2.png)
+![Scraping Results](images/photo2.png)
 
 ### Web Interface
 A screenshot of the web page interface where you can trigger the scraping process:
