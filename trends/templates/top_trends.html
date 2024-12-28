@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Trending Topics</title>
+</head>
+<body>
+    <p>These are the most happening topics as on {{ end_time }}</p>
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        <ul>
+            {% for trend in trends %}
+                <li>{{ trend }}</li>
+            {% endfor %}
+        </ul>
+    <p>The IP address used for this query was {{ client_ip }}.</p>
+    <p>Here’s a JSON extract of this record from the MongoDB:</p>
+        <pre>{{ trendj }}</pre>
+    {% endif %}
+
+    <!-- Link to go back to home or trigger other actions -->
+    <a href="{% url 'run_selenium_script' %}">Click here to run the query again.</a>
+</body>
+</html>
